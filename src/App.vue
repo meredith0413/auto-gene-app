@@ -1,20 +1,17 @@
-<!-- src/App.vue -->
 <template>
-  <router-view v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <el-config-provider :locale="locale" >
+    <router-view />
+  </el-config-provider>
 </template>
 
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
+<script setup lang="ts">
+import { ref } from 'vue';
+import { ElConfigProvider } from 'element-plus';
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+
+
+
+const locale = ref();
+
+
+</script>

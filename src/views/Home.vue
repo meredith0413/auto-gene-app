@@ -110,12 +110,13 @@
   </template>
   
   <script setup lang="ts">
+
   import { ref, onMounted } from 'vue'
   import { useRouter } from 'vue-router'
   import { ElMessage, ElMessageBox } from 'element-plus'
   import * as echarts from 'echarts'
   import type { ECharts } from 'echarts'
-  
+
   // 图标按需引入
   import {
     User,
@@ -133,6 +134,11 @@
   // 路由相关
   const router = useRouter()
   const activeMenu = ref('dashboard')
+
+
+  defineProps<{
+  msg: string
+}>()
   
   // 用户信息
   const user = ref({

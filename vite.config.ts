@@ -17,4 +17,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     },
   },
+  server: {
+    port: 3000,
+    open: true,
+    proxy: {
+      '/car-sys': {
+        target: '127.0.0.1:8002',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 });

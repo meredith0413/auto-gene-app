@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
     meta: {
