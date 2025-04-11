@@ -10,7 +10,7 @@ const router: Router = createRouter({
     return savedPosition || { top: 0 }
   }
 })
-
+console.log(router,'router');
 // 路由守卫示例
 router.beforeEach((to, from) => {
   // 修改页面标题

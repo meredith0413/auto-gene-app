@@ -3,7 +3,7 @@
     "module": "ESNext",          // 推荐
     "moduleResolution": "Node",  // 关键
     "esModuleInterop": true,     // 允许 CommonJS/ES 模块互操作
-    "types": ["vite/client"],    // 识别 Vite 环境变量
+    "types": ["vite/client","node"],    // 识别 Vite 环境变量
     "baseUrl": "./",             // 解析基础路径
     "lib": ["ES2015", "DOM"],
     "paths": {
