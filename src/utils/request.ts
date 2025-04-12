@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { localStorage } from '@/utils/storage';
-import useStore from '@/store';
+// import useStore from '@/store';
 
 // declare module 'axios' {
 //   interface AxiosInstance {
@@ -16,23 +16,23 @@ const service: AxiosInstance = axios.create({
 });
 
 // 请求拦截器
-service.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
-    if (!config.headers) {
-      throw new Error(
-        `Expected 'config' and 'config.headers' not to be undefined`
-      );
-    }
-    const { user } = useStore();
-    if (user.token) {
-      config.headers.Authorization = `${localStorage.get('token')}`;
-    }
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  }
-);
+// service.interceptors.request.use(
+//   (config: AxiosRequestConfig) => {
+//     if (!config.headers) {
+//       throw new Error(
+//         `Expected 'config' and 'config.headers' not to be undefined`
+//       );
+//     }
+//     const { user } = useStore();
+//     if (user.token) {
+//       config.headers.Authorization = `${localStorage.get('token')}`;
+//     }
+//     return config;
+//   },
+//   error => {
+//     return Promise.reject(error);
+//   }
+// );
 
 // 响应拦截器
 service.interceptors.response.use(
