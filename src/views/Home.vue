@@ -45,3 +45,4 @@ function insertApi(name: string) {
 }
 
 </script>
+@/types/api/manageApi/manageApi

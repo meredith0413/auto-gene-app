@@ -1,4 +1,4 @@
-import { insertApiParams } from '@/types/api/manageApi.d';
+import { insertApiParams } from '@/types/api/manageApi/manageApi';
 import request from '@/utils/request';
 import { AxiosPromise } from 'axios';
 import type { ECharts } from 'echarts'
